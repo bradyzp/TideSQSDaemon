@@ -11,3 +11,25 @@ Requirements
 
 - tidegravity
 - boto3
+
+
+Installation
+------------
+
+ToDo: PyPi distribution and installation instruction
+
+An example Systemd service unit file is provided which can be used to install this daemon as a service on a Linux system
+using systemd. Simply change the parameter values as required.
+The TideSQS.service file should then be copied/moved to /etc/systemd/system/TideSQS.service
+Run the following commands after installing the service file to the location above:
+
+```
+systemctl daemon-reload
+systemctl enable TideSQS.service
+systemctl start TideSQS.service
+
+```
+
+
+Note: An aws credentials file must also be created with appropriate API access keys for the daemon to write to an AWS
+SQS queue.

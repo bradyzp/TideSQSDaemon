@@ -1,0 +1,10 @@
+[Unit]
+Description=Tide Gravity SQS Supplier
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 -m TideSQSDaemon --lat 45 --lon 90 --alt 0 --queue tide-gravity-queue
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
