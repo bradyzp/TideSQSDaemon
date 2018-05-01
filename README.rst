@@ -23,12 +23,11 @@ using systemd. Simply change the parameter values as required.
 The TideSQS.service file should then be copied/moved to /etc/systemd/system/TideSQS.service
 Run the following commands after installing the service file to the location above:
 
-```
-systemctl daemon-reload
-systemctl enable TideSQS.service
-systemctl start TideSQS.service
+.. code-block::
 
-```
+    systemctl daemon-reload
+    systemctl enable TideSQS.service
+    systemctl start TideSQS.service
 
 
 Note: An aws credentials file must also be created with appropriate API access keys for the daemon to write to an AWS
