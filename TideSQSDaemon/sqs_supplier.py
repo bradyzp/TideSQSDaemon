@@ -15,11 +15,11 @@ from tidegravity.tidegravity import solve_longman_tide_scalar as solve_tide
 
 
 class SQSSupplier(Thread):
-    def __init__(self, lat, lon, alt, delay=60, aws_profile='default'):
+    def __init__(self, lat, lon, alt, queue_name, delay=60, aws_profile='default'):
         super().__init__(name=__name__)
         session = boto3.Session(profile_name=aws_profile)
         sqs = session.resource('sqs')
-        self.queue = sqs.get_queue_by_name(QueueName='tide-gravity-queue')
+        self.queue = sqs.get_queue_by_name(QueueName=queue_name)
         self.lat = lat
         self.lon = lon
         self.alt = alt
