@@ -1,0 +1,16 @@
+# PyCharm Project Dir
+.idea/
+
+# Venv and Byte-compiled objects
+__pycache__/*
+venv/*
+*.pyc
+
+# Distribution/Packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Unit Test Logs
+.pytest_cache/
