@@ -1,2 +1,5 @@
 tidegravity
-boto3
+boto3==1.7.28
+flask==1.0.2
+PyTest==3.5.1
+marshmallow==2.15.3

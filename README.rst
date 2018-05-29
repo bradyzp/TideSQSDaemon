@@ -1,4 +1,4 @@
-TideSQSDaemon
+TideServer
 =============
 
 A simple Python service designed to be run as a daemon, it will compute tidal gravity corrections (Sun/Moon/Total)
@@ -11,6 +11,7 @@ Requirements
 
 - tidegravity
 - boto3
+- flask
 
 
 Installation

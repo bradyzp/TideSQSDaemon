@@ -4,16 +4,18 @@ from setuptools import setup
 
 requirements = [
     'tidegravity',
-    'boto3'
+    'boto3',
+    'flask',
+    'marshmallow'
 ]
 
 setup(
-    name='TideSQSDaemon',
-    version='0.1alpha-1',
-    packages=['TideSQSDaemon'],
+    name='TideServer',
+    version='0.2alpha-1',
+    packages=['src'],
     install_requires=requirements,
     python_requires='>=3.5.*',
-    description="AWS SQS Daemon to consume/produce tide gravity corrections.",
+    description="General purpose server application to supply tide corrections via HTTP REST API or AWS SQS",
     author="Zachery Brady",
     author_email="bradyzp@dynamicgravitysystems.com",
     classifiers=[

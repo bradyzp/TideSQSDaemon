@@ -1,1 +1,3 @@
 TideSQS.service
+uwsgi.ini
+wsgi.py
